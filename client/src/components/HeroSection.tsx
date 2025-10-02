@@ -18,7 +18,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-full blur-2xl opacity-20 animate-pulse"></div>
               <img
                 src={profileImage}
-                alt="Dr. A. Srinivasan"
+                alt="Mr. A. Srinivasan"
                 className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary/20 shadow-2xl"
                 data-testid="img-profile"
               />
@@ -31,7 +31,7 @@ export function HeroSection() {
                 Assistant Professor & Innovation Leader
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground" data-testid="text-name">
-                Dr. A. Srinivasan
+                Mr. A. Srinivasan
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground font-medium">
                 AI/ML Researcher · Ph.D. Candidate · IIC Convener

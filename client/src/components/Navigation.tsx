@@ -6,10 +6,9 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "About", href: "#about" },
   { label: "Leadership", href: "#leadership" },
-  { label: "Qualifications", href: "#qualifications" },
   { label: "Research", href: "#research" },
-  { label: "Teaching", href: "#teaching" },
-  { label: "Skills", href: "#skills" },
+  { label: "Events", href: "#events" },
+  { label: "Mentoring", href: "#mentoring" },
   { label: "Contact", href: "#contact" }
 ];
 
@@ -50,7 +49,7 @@ export function Navigation() {
             className="text-xl font-bold text-foreground hover:text-primary transition-colors"
             data-testid="link-logo"
           >
-            Dr. A. Srinivasan
+            Mr. A. Srinivasan
           </button>
 
           <div className="hidden lg:flex items-center gap-6">

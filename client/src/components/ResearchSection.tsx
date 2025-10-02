@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { FileText, BookOpen } from "lucide-react";
+import { FileText, BookOpen, Award } from "lucide-react";
 
 const publications = [
   {
@@ -54,6 +54,28 @@ const publications = [
   }
 ];
 
+const bookChapters = [
+  {
+    title: "Role of Technology in the Financial Sector",
+    publisher: "Shanlax Publications",
+    isbn: "978-81-19337-00-2",
+    category: "book"
+  }
+];
+
+const patents = [
+  {
+    title: "Conceptual framework for Assessing consumer behaviour against influencing Advertisement Forces with AIDA Factors",
+    date: "30/08/2024",
+    category: "patent"
+  },
+  {
+    title: "Crafting a Sustainable Luxury Brand Equity Frameworks: A Model for Integrating Environmental and Social Responsibility in High-end Markets",
+    date: "30/08/2024",
+    category: "patent"
+  }
+];
+
 export function ResearchSection() {
   const [selectedTab, setSelectedTab] = useState("journals");
 
@@ -71,7 +93,7 @@ export function ResearchSection() {
         </div>
 
         <Tabs value={selectedTab} onValueChange={setSelectedTab} className="w-full">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
+          <TabsList className="grid w-full max-w-3xl mx-auto grid-cols-3 mb-8">
             <TabsTrigger value="journals" data-testid="tab-journals">
               <FileText className="h-4 w-4 mr-2" />
               Journal Papers
@@ -79,6 +101,10 @@ export function ResearchSection() {
             <TabsTrigger value="books" data-testid="tab-books">
               <BookOpen className="h-4 w-4 mr-2" />
               Book Chapters
+            </TabsTrigger>
+            <TabsTrigger value="patents" data-testid="tab-patents">
+              <Award className="h-4 w-4 mr-2" />
+              Patents
             </TabsTrigger>
           </TabsList>
 
@@ -110,9 +136,42 @@ export function ResearchSection() {
           </TabsContent>
 
           <TabsContent value="books" className="space-y-6">
-            <div className="text-center py-12">
-              <BookOpen className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">Book chapters and publications coming soon</p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {bookChapters.map((book, index) => (
+                <Card key={index} className="p-6 hover-elevate" data-testid={`book-${index}`}>
+                  <div className="space-y-3">
+                    <h3 className="text-lg font-semibold text-foreground leading-tight">
+                      {book.title}
+                    </h3>
+                    
+                    <div className="space-y-1">
+                      <p className="text-sm font-medium text-foreground">{book.publisher}</p>
+                      <p className="text-sm text-muted-foreground">ISBN: {book.isbn}</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </TabsContent>
+
+          <TabsContent value="patents" className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              {patents.map((patent, index) => (
+                <Card key={index} className="p-6 hover-elevate" data-testid={`patent-${index}`}>
+                  <div className="space-y-3">
+                    <div className="flex items-start justify-between gap-4">
+                      <h3 className="text-lg font-semibold text-foreground leading-tight">
+                        {patent.title}
+                      </h3>
+                      <Badge className="bg-accent text-accent-foreground flex-shrink-0">
+                        Patent
+                      </Badge>
+                    </div>
+                    
+                    <p className="text-sm text-muted-foreground">Published: {patent.date}</p>
+                  </div>
+                </Card>
+              ))}
             </div>
           </TabsContent>
         </Tabs>

@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center space-y-2">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Dr. A. Srinivasan. All rights reserved.
+            © {currentYear} Mr. A. Srinivasan. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
             Empowering innovation and fostering lifelong learning
