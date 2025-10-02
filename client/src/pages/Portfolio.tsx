@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
+import { BentoGrid } from "@/components/BentoGrid";
 import { AboutSection } from "@/components/AboutSection";
 import { LeadershipSection } from "@/components/LeadershipSection";
 import { QualificationsSection } from "@/components/QualificationsSection";
@@ -22,6 +23,7 @@ export default function Portfolio() {
       <div className="min-h-screen bg-background">
         <Navigation />
         <HeroSection />
+        <BentoGrid />
         <AboutSection />
         <LeadershipSection />
         <QualificationsSection />
