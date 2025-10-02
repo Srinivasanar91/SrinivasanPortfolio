@@ -1,0 +1,34 @@
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { Navigation } from "@/components/Navigation";
+import { HeroSection } from "@/components/HeroSection";
+import { AboutSection } from "@/components/AboutSection";
+import { LeadershipSection } from "@/components/LeadershipSection";
+import { QualificationsSection } from "@/components/QualificationsSection";
+import { ResearchSection } from "@/components/ResearchSection";
+import { TeachingSection } from "@/components/TeachingSection";
+import { ProfessionalDevSection } from "@/components/ProfessionalDevSection";
+import { SkillsSection } from "@/components/SkillsSection";
+import { DigitalPresenceSection } from "@/components/DigitalPresenceSection";
+import { ContactSection } from "@/components/ContactSection";
+import { Footer } from "@/components/Footer";
+
+export default function Portfolio() {
+  return (
+    <ThemeProvider>
+      <div className="min-h-screen bg-background">
+        <Navigation />
+        <HeroSection />
+        <AboutSection />
+        <LeadershipSection />
+        <QualificationsSection />
+        <ResearchSection />
+        <TeachingSection />
+        <ProfessionalDevSection />
+        <SkillsSection />
+        <DigitalPresenceSection />
+        <ContactSection />
+        <Footer />
+      </div>
+    </ThemeProvider>
+  );
+}
