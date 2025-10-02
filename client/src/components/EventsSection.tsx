@@ -69,13 +69,14 @@ export function EventsSection() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {events.map((event, index) => (
-            <Card key={index} className="p-6 hover-elevate" data-testid={`event-${index}`}>
-              <div className="space-y-3">
+            <Card key={index} className="p-6 hover-elevate active-elevate-2 group relative overflow-hidden" data-testid={`event-${index}`}>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="space-y-3 relative z-10">
                 <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-lg font-semibold text-foreground leading-tight">
+                  <h3 className="text-lg font-semibold text-foreground leading-tight group-hover:text-primary transition-colors duration-300">
                     {event.title}
                   </h3>
-                  <Badge variant="outline" className="flex-shrink-0">{event.role}</Badge>
+                  <Badge variant="outline" className="flex-shrink-0 border-primary/30">{event.role}</Badge>
                 </div>
                 
                 <div className="flex items-center gap-2 text-muted-foreground">

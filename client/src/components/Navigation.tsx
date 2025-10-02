@@ -39,7 +39,7 @@ export function Navigation() {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-transparent"
+        isScrolled ? "bg-background/80 backdrop-blur-lg shadow-lg border-b border-border/50" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
@@ -57,10 +57,11 @@ export function Navigation() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 relative group"
                 data-testid={`nav-${item.label.toLowerCase()}`}
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
             <ThemeToggle />

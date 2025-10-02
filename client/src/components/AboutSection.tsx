@@ -29,7 +29,7 @@ export function AboutSection() {
           </div>
 
           <div className="space-y-6">
-            <Card className="p-6 space-y-4">
+            <Card className="p-6 space-y-4 hover-elevate sticky top-24 bg-gradient-to-br from-card to-card/50 backdrop-blur-sm">
               <h3 className="text-xl font-semibold text-foreground mb-4">Quick Facts</h3>
               
               <div className="flex items-start gap-3">

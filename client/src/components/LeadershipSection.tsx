@@ -55,11 +55,12 @@ export function LeadershipSection() {
             return (
               <Card 
                 key={index} 
-                className={`p-6 hover-elevate transition-all duration-300 ${item.highlight ? 'border-accent' : ''}`}
+                className={`p-6 hover-elevate active-elevate-2 transition-all duration-300 group relative overflow-hidden ${item.highlight ? 'border-accent shadow-lg shadow-accent/10' : ''}`}
                 data-testid={`card-achievement-${index}`}
               >
-                <div className="space-y-4">
-                  <div className={`inline-flex p-3 rounded-lg ${item.highlight ? 'bg-accent/10' : 'bg-primary/10'}`}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.highlight ? 'from-accent/5 to-transparent' : 'from-primary/5 to-transparent'} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                <div className="space-y-4 relative z-10">
+                  <div className={`inline-flex p-3 rounded-lg ${item.highlight ? 'bg-accent/10' : 'bg-primary/10'} group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className={`h-6 w-6 ${item.highlight ? 'text-accent' : 'text-primary'}`} />
                   </div>
                   

@@ -65,7 +65,7 @@ export function ContactSection() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="p-8">
+          <Card className="p-8 bg-gradient-to-br from-card via-card to-card/50 shadow-xl">
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Contact Information</h3>

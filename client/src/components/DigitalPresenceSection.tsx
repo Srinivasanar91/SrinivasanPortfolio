@@ -48,10 +48,11 @@ export function DigitalPresenceSection() {
           {platforms.map((platform, index) => {
             const Icon = platform.icon;
             return (
-              <Card key={index} className="p-6 hover-elevate" data-testid={`platform-${index}`}>
-                <div className="space-y-4">
+              <Card key={index} className="p-6 hover-elevate active-elevate-2 group relative overflow-hidden" data-testid={`platform-${index}`}>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="space-y-4 relative z-10">
                   <div className="flex items-center gap-3">
-                    <div className="p-3 rounded-lg bg-background">
+                    <div className="p-3 rounded-lg bg-background shadow-sm group-hover:scale-110 transition-transform duration-300">
                       <Icon className={`h-8 w-8 ${platform.color}`} />
                     </div>
                   </div>
