@@ -1,8 +1,11 @@
 [build]
-  command = "cd client && npm install && npm run build"
-  publish = "client/dist"
+  # run root build which runs vite + esbuild (as your package.json currently does)
+  command = "npm ci && npm run build"
+  # your build places the Vite output at dist/public
+  publish = "dist/public"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
